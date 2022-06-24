@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menghitung IPK Loop</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 align="center">Perhitungan IPK Semester 1</h1>
+        <p>
+            Nama : Zahrina Nurpuriani <br />
+            NIM : 20210121016 <br />
+            Prodi : Sistem Informasi 1/2
+        </p>
+        <hr>
+        <div class="row">
+            <div class="col" style="background-color: #FBFBFB;">
+                <h4>Mata Kuliah</h4>
+                <hr>
+                <p><b>General English</b></p>
+                <p><b>Sistem dan Teknologi Informasi</b></p>
+                <p><b>Algoritma dan Pemrograman</b></p>
+                <p><b>Pancasila dan Kewarganegaraan</b></p>
+                <p><b>Matematika Bisnis</b></p>
+                <p><b>Manajemen dan Organisasi</b></p>
+                <p><b>Pembangunan Karakter dan Etika Profesi</b></p>
+            </div>
+            <div class="col col-1 text-center" style="background-color: #DAF7A6;">
+                <h4>UTS</h4>
+                <hr>
+                <script>
+                    var uts = [90, 90, 95, 85, 85, 90, 95];
+
+                    // menggunakan perulangan untuk mencetak semua isi array
+                    for (let i = 0; i < uts.length; i++) {
+                        document.writeln("<p>" + uts[i] + "</p>");
+                    }
+                </script>
+            </div>
+            <div class="col col-1 text-center" style="background-color: #FACECE;">
+                <h4>UAS</h4>
+                <hr>
+                <script>
+                    var uas = [90, 88, 80, 100, 85, 90, 90];
+
+                    // menggunakan perulangan untuk mencetak semua isi array
+                    for (let i = 0; i < uas.length; i++) {
+                        document.writeln("<p>" + uas[i] + "</p>");
+                    }
+                </script>
+            </div>
+            <div class="col col-1 text-center" style="background-color: #FAFACE;">
+                <h4>Absensi</h4>
+                <hr>
+                <script>
+                    var absen = [100, 100, 100, 100, 100, 100, 100];
+
+                    // menggunakan perulangan untuk mencetak semua isi array
+                    for (let i = 0; i < absen.length; i++) {
+                        document.writeln("<p>" + absen[i] + " %</p>");
+                    }
+                </script>
+            </div>
+            <div class="col col-1 text-center" style="background-color: #CEF3FA;">
+                <h4>Tugas</h4>
+                <hr>
+                <script>
+                    var tugas = [95, 90, 95, 90, 87, 90, 95];
+
+                    // menggunakan perulangan untuk mencetak semua isi array
+                    for (let i = 0; i < tugas.length; i++) {
+                        document.writeln("<p>" + tugas[i] + "</p>");
+                    }
+                </script>
+            </div>
+            <div class="col col-1 text-center" style="background-color: #D7D7D7;">
+                <h4>Nilai</h4>
+                <hr>
+                <script>
+                    var totaleng = uts[0] * 0.3 + uas[0] * 0.4 + absen[0] * 0.2 + tugas[0] * 0.1;
+                    document.writeln("<p>" + totaleng + "</p>");
+
+                    var totalsti = uts[1] * 0.3 + uas[1] * 0.4 + absen[1] * 0.2 + tugas[1] * 0.1;
+                    document.writeln("<p>" + totalsti + "</p>");
+
+                    var totalalgo = uts[2] * 0.3 + uas[2] * 0.4 + absen[2] * 0.2 + tugas[2] * 0.1;
+                    document.writeln("<p>" + totalalgo + "</p>");
+
+                    var totalpkn = uts[3] * 0.3 + uas[3] * 0.4 + absen[3] * 0.2 + tugas[3] * 0.1;
+                    document.writeln("<p>" + totalpkn + "</p>");
+
+                    var totalmabis = uts[4] * 0.3 + uas[4] * 0.4 + absen[4] * 0.2 + tugas[4] * 0.1;
+                    document.writeln("<p>" + totalmabis + "</p>");
+
+                    var totalmnj = uts[5] * 0.3 + uas[5] * 0.4 + absen[5] * 0.2 + tugas[5] * 0.1;
+                    document.writeln("<p>" + totalmnj + "</p>");
+
+                    var totaletika = uts[6] * 0.3 + uas[6] * 0.4 + absen[6] * 0.2 + tugas[6] * 0.1;
+                    document.writeln("<p>" + totaletika + "</p>");
+                </script>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7"></div>
+            <div class="col">
+                <hr>
+                <script>
+                    document.writeln("<b>IPK </b><br>");
+                    document.writeln("<b>Grade </b><br>");
+                </script>
+            </div>
+            <div class="col col-1 text-center">
+                <hr>
+                = <br> =
+            </div>
+            <div class="col">
+                <hr>
+                <script>
+                    var IPK = (totaleng + totalsti + totalalgo + totalpkn + totalmabis + totalmnj + totaletika) / 175;
+                    document.writeln(IPK.toFixed(2) + "<br>");
+
+                    if (IPK >= 3.51 && IPK <= 4.00) {
+                        document.writeln("A");
+                    } else if (IPK >= 3.00 && IPK < 3.50) {
+                        document.writeln("B");
+                    } else if (IPK >= 2.76 && IPK < 3.00) {
+                        document.writeln("C");
+                    } else {
+                        document.writeln("D");
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- Math.round(IPK) = untuk membulatkan nilai, dalam kurungnya variable yg ingin dibulatkan -->
+<!-- .toFixed(2) = untuk mengambil berapa angka dibelakang koma, dalam kurungnya jumlah angka yg diinginkan -->
